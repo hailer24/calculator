@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-size: 2vh;
 }
+
+body {
+  overflow: hidden;
+}
 #root {
   display: flex;
   justify-content: center;
@@ -34,15 +38,16 @@
   clip-path: circle(30% at 80% 80%);
 }
 .app {
-  position: relative;
+  position: absolute;
   z-index: 10;
   margin: auto;
   top: -10px;
   height: fit-content;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(20px);
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  top: 30%;
 }
 .container {
   color: #fff;
@@ -55,6 +60,8 @@
   overflow: hidden;
   border-bottom: 1px solid rgba(255, 255, 255, 0.02);
   border-right: 1px solid rgba(255, 255, 255, 0.02);
+
+  cursor: move;
 }
 .result .history {
   font-size: 3vh;
@@ -77,7 +84,7 @@
 .keyboard div.btn {
   display: grid;
   place-content: center;
-  width: 7vh;
+  width: 7vw;
   height: 6vh;
   padding: 10px;
   user-select: none;
